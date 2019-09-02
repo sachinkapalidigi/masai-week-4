@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Marks Recorder</title>    
+</head>
+<body>
+    <div id="formSection">
+        <div class="container">
+            <div>
+                <label for="uniqueId">Unique Id</label>
+                <input id="uniqueId" type="text" placeholder="G3SB004">
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="nameInput">Name</label>
+                <input id="nameInput" type="text">
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="gradeInput">Grade</label>
+                <select id="gradeInput">
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                </select> 
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="sectionInput">Section</label>
+                <select id="sectionInput">
+                    <option value="A">Section A</option>
+                    <option value="B">Section B</option>
+                    <option value="C">Section C</option>                
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="examTypeInput">Exam Type</label>
+                <select id="examTypeInput">
+                    <option value="halfYearly">Half Yearly</option>
+                    <option value="quaterly">Quaterly</option>                
+                </select>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div>
+                <label for="englishInput">English</label>
+                <input id="englishInput" type="text">
+            </div>
+            <br>            
+            <div>
+                <label for="kannadaInput">Kannada</label>
+                <input id="kannadaInput" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="mathsInput">Maths</label>
+                <input id="mathsInput" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="scienceInput">Science</label>
+                <input id="scienceInput" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="socialInput">Social</label>
+                <input id="socialInput" type="text">
+            </div>
+            <br>
+        </div>
+        <div  id="formButton">
+            <button onclick="addStudent()">Enter Data</button>
+        </div>        
+    </div>
+    <hr>
+    <div id="displayContainer">
+        <div id="filterContainer">
+            <select onchange="applyFilter()" id="gradeFilter">
+                <option value="1">Class 1</option>
+                <option value="2">Class 2</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+            </select>
+            <select onchange="applyFilter()" id="sectionFilter">
+                <option value="A">Section A</option>
+                <option value="B">Section B</option>
+                <option value="C">Section C</option>                
+            </select>
+            <select onchange="applyFilter()" id="examTypeFilter">
+                <option value="halfYearly">Half Yearly</option>
+                <option value="quaterly">Quaterly</option>
+            </select>
+            <select onchange="applyFilter()" id="subjectFilter">
+                <option value="all" selected>All</option>
+                <option value="English">English</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Maths">Maths</option>
+                <option value="Science">Science</option>
+                <option value="Social">Social</option>
+            </select>
+        </div>
+        <hr>
+        <div id="displayTable">
+            <table id="marksTable">
+
+            </table>
+        </div>
+        <div id="statistics">
+            <table id="statisticsTable">
+                
+            </table>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
